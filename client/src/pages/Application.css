@@ -1,0 +1,22 @@
+div.modal-content {
+  position: relative;
+  background-color:floralwhite;
+  color: black;
+}
+
+div.col-lg-3.col-md-4.col-12 {
+  margin-bottom: 40px;
+}
+
+input[type="text"] {
+  width: 500px;
+  height: 45px;
+}
+
+a.nav-linked {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+

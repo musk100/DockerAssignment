@@ -1,0 +1,28 @@
+.leftright {
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+a.nav-link {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+a.nav-links {
+  margin-left: 20px;
+}
+
+a.nav-linkss {
+  position: absolute;
+  top: 5px;
+  right: 45px;
+}
+
+.line-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
