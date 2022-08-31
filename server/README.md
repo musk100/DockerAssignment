@@ -74,3 +74,15 @@ container
 ✅ Can only remove images if they are not being used by any containers (Containers need to be removed first)
 
 ✅ docker image prune removes all images at once
+
+
+
+<!-- Sharing Images & Containers -->
+✅ Everyone who has an image, can create containers based on the image --> Share a Dockerfile, Share a built image
+
+✅ Can push images to --> Docker Hub, Private Registry
+
+
+
+<!-- Data and Volumes -->
+✅ 

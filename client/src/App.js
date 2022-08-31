@@ -15,19 +15,20 @@ import Application from "./pages/Application"
 import TaskPage from "./pages/TaskPage"
 import TaskEdit from "./pages/TaskEdit"
 import TaskView from "./pages/TaskView"
+import ProtectedRoutes from "./components/ProtectedRoutes"
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
         <ToastContainer position="top-center" />
         <Routes>
-          <Route exact path="/application" element={<Application />} />
+        <Route path="/" element={<AdminLogin />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/application" element={<Application />} />
           <Route path="/taskedit/:Task_name" element={<TaskEdit/>} />
           <Route path="/view/:Task_name" element={<TaskView/>} />
           <Route path="/taskpage/:App_Acronym" element={<TaskPage />} />
           <Route path="/mainmenu" element={<Home />} />
-          <Route path="/" element={<AdminLogin />} />
           <Route path="/addUser" element={<AddEdit />} />
           <Route path="/addUserGroup" element={<CreateUserGroup />} />
           <Route path="/update/:username" element={<View />} />
@@ -35,8 +36,8 @@ function App() {
           <Route path="/userchangepassword" element={<UserChangePassword />} />
           <Route path="/userchangeemail" element={<UserChangeEmail />} />
           <Route path="/user" element={<User />} />
+          </Route>
         </Routes>
-      </div>
     </BrowserRouter>
   )
 }

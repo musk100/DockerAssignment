@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-require("dotenv").config();
+require("dotenv").config()
 
 const AddController = require("./Controllers/AddController")
 const CheckGroupController = require("./Controllers/CheckGroupController")
@@ -26,8 +26,6 @@ app.use(
     credentials: true
   })
 )
-
-
 
 //routes
 AddController(app)
