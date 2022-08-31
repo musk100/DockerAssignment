@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
+require("dotenv").config();
 
 const AddController = require("./Controllers/AddController")
 const CheckGroupController = require("./Controllers/CheckGroupController")
@@ -17,6 +18,7 @@ const TaskStateAPI = require("./restAPI/GetTaskbyState")
 const PromoteTaskAPI = require("./restAPI/PromoteTask2Done")
 
 app.use(express.json())
+const port = process.env.API_PORT
 
 app.use(
   cors({
@@ -46,8 +48,8 @@ app.use("*", function checkroute(req, res) {
   res.send({ code: 4004 })
 })
 
-app.listen(5000, () => {
-  console.log("Server is running on port 5000")
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`)
 })
 
 module.export = app
